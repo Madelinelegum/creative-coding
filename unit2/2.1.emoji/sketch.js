@@ -7,6 +7,7 @@ function setup() {
 function draw() {
   background(150);
 
+//I chose this emoji because it is my most used one. It is my reaction to every text I receive. It is a natural expression that can mean multiple things.
 
 
   // basic components for the face
