@@ -26,15 +26,17 @@ function draw() {
       // fill color
       fill(244,random(8,130),200);
 
-      // arc
+      //arc
       arc(random(0,10,100,0,0,90));
 
       // the circle
       ellipse(0,0,random(75,130));
 
+      //pop
       pop(random(8,10));
-    }
+
+        }
 
   }
-  
+
 }
