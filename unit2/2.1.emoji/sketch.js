@@ -15,8 +15,6 @@ function draw() {
   stroke ("#ddbb77");
   strokeWeight(20);
   circle(200,200,250);
-
-
  
 
   // used this link to find the color "mocha" https://htmlcolorcodes.com/colors/shades-of-brown/
