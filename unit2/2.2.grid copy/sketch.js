@@ -1,7 +1,9 @@
 function setup() {
   // create a canvas
   createCanvas(1200, 1200);
-  noLoop();
+ 
+ // delated no loop
+frameRate(1)
 }
 
 function draw() {
