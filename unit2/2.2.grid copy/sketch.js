@@ -1,9 +1,7 @@
 function setup() {
   // create a canvas
   createCanvas(1200, 1200);
- 
- // delated no loop
-frameRate(1)
+  noLoop();
 }
 
 function draw() {
@@ -20,19 +18,42 @@ function draw() {
       translate(x * 120,y * 120);
       
       // thickness to circle
-      strokeWeight(random(5,28) );
+      strokeWeight(10,10); // I made the outline of the circle thinner and having all the circles be the same thickness.
 
       // outside line color
-      stroke(random(0,245),103,293);
+      stroke(random(0,100),103,150); // I changed the outside color of the triangles to make it look retro.
 
       // fill color
-      fill(244,random(8,130),200);
+      fill(14,208,200); // the fill color is now a seafoam green
 
       //arc
       arc(random(0,10,100,0,0,90));
 
-      // the circle
-      ellipse(0,0,random(75,130));
+      // the triangle
+      triangle(-50, 0, 52.5, 65, 0, -50); // changed from ellipse to triangle
+
+      //pop
+      pop(random(8,10));
+
+      push();
+
+      //moving the drawing plan by adding new sqaure
+      translate(x * 120,y * 120);
+      
+      // thickness to sqaure
+      strokeWeight((20,20)); // changed the size of square
+
+      // outside line color
+      stroke(500,0,200,100); // sqaure color
+
+      // fill color
+      fill(244,random(8,130),100);
+
+      //arc
+      arc(random(0,10,100,0,0,90));
+
+      // the sqaure
+      rect(-2,0,-4,2); // adding a sqaure inside the circle, the -2,0 codes the square in the middle of the triangle
 
       //pop
       pop(random(8,10));
@@ -42,3 +63,4 @@ function draw() {
   }
 
 }
+
