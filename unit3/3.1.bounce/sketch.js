@@ -41,9 +41,9 @@ function drawStar(x, y, radius1, radius2, npoints) {
     let sy = y + sin(a) * radius2; // y position of the outer vertex
     vertex(sx, sy); // vertex of the outer point
     sx = x + cos(a + halfAngle) * radius1; // x positon of the inner vertex
-    sy = y + sin(a + halfAngle) * radius1; // y position of the inner vertex
-    vertex(sx, sy); // vertex of the inner point
+    sy = y + sin(a + halfAngle) * radius1;  
 
-  }
+    // y position of the inner vertex
+    vertex(sx, sy); // vertex of the inner point
   endShape(CLOSE);
 }
