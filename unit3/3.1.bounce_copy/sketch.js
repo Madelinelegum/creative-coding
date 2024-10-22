@@ -8,10 +8,13 @@ let xspeed2 = 3;
 let yspeed2 = 3;
 let angle1 = 0;
 let angle2 = 0;
+let color1;
+let color2;
 
 function setup() {
   createCanvas(400, 300); //canvas size
-  fill("pink"); // first star color
+  color1 = color("pink"); // first star orginial color
+  color2 = color("aqua") // second star orginial color
 }
 
 function draw() {
@@ -21,43 +24,45 @@ function draw() {
   translate(width / 2, height / 2); // move the orgin to the center 
 
   //first star // reference https://www.youtube.com/watch?v=o9sgjuh-CBM and https://p5js.org/reference/p5/rotate/
-  push()
+  fill(color1);
+  push();
   translate(x1, y1);
   rotate(angle1);
   drawStar(0,0,30,15,5);
-  pop()
+  pop();
 
   //second star
-  push()
+  fill(color2);
+  push();
   translate(x2, y2);
   rotate(angle2);
   drawStar(0,0,30,15,5);
-  pop()
+  pop();
 
 
 //first star
   if (x1 > 175 | x1 < -175){
     xspeed1 = -xspeed1; // reverse the bounce 
-    fill(random(225), 178,230); // random fill color
+    color1 = color(random(225), 158,230); // random fill color
     angle1 += PI / 4; //rotate
 }
   // first star
   if (y1 > 125 | y1 < -125){
     yspeed1 = -yspeed1; // reverse the bounce 
-    fill(random(225), 178,230); // random fill color
+    color1 = color(random(225), 158,230); // random fill color
     angle1 += PI / 4; // rotate
 }
 
 //second star
   if (x2 > 175 | x2 < -175){
     xspeed2 = -xspeed2; // reverse the bounce 
-    fill(random(225), 178,230); // random fill color
+    color2 = color(random(225), 178,230); // random fill color
      angle2 += PI / 4; // rotate
 }
   //second star
 if (y2 > 125 | y2 < -125){
     yspeed2 = -yspeed2; // reverse the bounce 
-    fill(random(225), 178,230); // random fill color
+    color2 = color(random(225), 178,230); // random fill color
      angle2 += PI / 4; // rotate
 }
 
