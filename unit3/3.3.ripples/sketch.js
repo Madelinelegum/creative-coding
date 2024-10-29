@@ -9,7 +9,7 @@ let ripplers = []; // Array to hold all ripple objects
       this.x = x;
       this.y = y;
       this. d = 0; //diamter of ripple
-      this.opacity = 255; //opacity
+      this.opacity = 255; //opacity // even though this is css it helped me understand more about opacity https://www.w3schools.com/cssref/css3_pr_opacity.php
   
 }
 
