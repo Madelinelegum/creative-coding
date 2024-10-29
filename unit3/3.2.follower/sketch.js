@@ -12,7 +12,7 @@ let goalSize = 30;
 let followerImg;
 
 function preload() {
-  followerImg = loadImage('OIP.jpg');
+  followerImg = loadImage("Kayne.jpg")
 }
 
 function setup() {
@@ -45,6 +45,7 @@ y += speedy;
 
 // Kayne image 
 image(followerImg, x, y, 50, 50);
+
 if (mouseX > x){
   //move to the right
   speedx = speedfactor;
@@ -57,4 +58,46 @@ if (mouseY > y){
   //move to the right
   speedy = speedfactor;
 }else{
-//  
+// move to the left
+  speedy = -speedfactor;
+
+}
+
+  // check for collision with follower
+  if (d < 25){
+    score += 1;
+    x = random(width);
+    y = random(height);
+
+  }
+
+  // check for collision with square
+
+  if(
+    mouseX > goalx &
+    mouseX < goalx + goalSize &
+    mouseY > goaly &
+    mouseY < goaly + goalSize
+    ){
+    score += 1;
+  // reset follower
+    x = random(width);
+    y = random(height);
+
+    // reset goal
+    goalx = random(width);
+    goaly = random(height);
+
+
+  }
+
+if(debug){
+    textSize(30);
+    text("mouseX: " + mouseX, 50,50);
+    text("mouseY: " + mouseY, 50,80);
+    text("x:  " + x, 50, 120);
+    text("y:  " + y, 50, 150);
+    text("d:  " + d, 50, 180);
+    text("score:  " + score, 50, 210);
+}
+}
