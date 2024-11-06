@@ -12,7 +12,7 @@ let goalSize = 30;
 let followerImg;
 
 function preload() {
-  followerImg = loadImage("Kayne.jpg")
+  followerImg = loadImage("https://madelinelegum.github.io/creative-coding/unit3/3.2.follower/Kayne.jpg")
 }
 
 function setup() {
