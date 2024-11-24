@@ -10,6 +10,8 @@ function setup() {
 function draw() {
   background(133, 194, 230); // Background color // used the link for the light blue color (line 9)- https://editor.p5js.org/Prabashi/sketches/pOiiM-FJC 
   
+  drawSun(80,70,100); //adding the sun
+
   noStroke();
   fill (34,139,34); // dark green color for first hill {
 
@@ -54,14 +56,23 @@ beginShape();
     vertex(0,height);
     endShape(CLOSE); // completes shape and fills in the hill with green
 
+    drawcloud(150,150);
+    drawcloud(350,100);
+    drawcloud(600,200);
 }
 
 function drawcloud(x,y){
 
 fill(255);
-noStoke();
+noStroke();
 ellipse(x, y, 100, 60);
-ellipse(x, - 40, y, 70, 40);
-ellipse(x + 40, y, 70, 40);
+ellipse(x, - 40, y, 70, 50);
+ellipse(x + 40, y, 70, 50);
 
+}
+
+function drawSun(x, y, diameter) {
+  fill(255, 223, 0);
+  noStroke();
+  ellipse(x, y, diameter, diameter);
 }
