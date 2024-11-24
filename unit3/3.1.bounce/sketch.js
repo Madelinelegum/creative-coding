@@ -45,5 +45,6 @@ function drawStar(x, y, radius1, radius2, npoints) {
 
     // y position of the inner vertex
     vertex(sx, sy); // vertex of the inner point
+  }
   endShape(CLOSE);
 }
