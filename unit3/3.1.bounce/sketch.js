@@ -17,12 +17,12 @@ function draw() {
   drawStar(x, y, 30, 15, 5); // star is at a position (x,y) radius of 30, inner radius 15, and 5 points
 
 
-  if (x > 175 | x < -175){
+  if (x > 175 || x < -175){
     xspeed = -xspeed; // reverse the bounce 
     fill(random(225), 178,230); // random fill color
 }
 
-  if (y > 125 | y < -125){
+  if (y > 125 || y < -125){
     yspeed = -yspeed; // reverse the bounce 
     fill(random(225), 178,230); // random fill color
 }
@@ -42,9 +42,9 @@ function drawStar(x, y, radius1, radius2, npoints) {
     vertex(sx, sy); // vertex of the outer point
     sx = x + cos(a + halfAngle) * radius1; // x positon of the inner vertex
     sy = y + sin(a + halfAngle) * radius1;  
-
     // y position of the inner vertex
     vertex(sx, sy); // vertex of the inner point
+    
   }
   endShape(CLOSE);
 }
