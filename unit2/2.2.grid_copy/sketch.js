@@ -5,35 +5,35 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background("blue");
 
   //moving grid towards center
   translate(180,180)
 
-  for(let x = 0; x < 8; x += 1) {
-    for(let y = 0; y < 8; y += 1){
+  for(let x = 0; x < 8; x += 3) {
+    for(let y = 0; y < 8; y += 3){
       push();
 
       //moving the drawing plan by adding new circle
       translate(x * 120,y * 120);
       
       // thickness to circle
-      strokeWeight(10,10); // I made the outline of the circle thinner and having all the circles be the same thickness.
+      strokeWeight(3,3); // I made the outline of the circle thinner and having all the circles be the same thickness.
 
       // outside line color
-      stroke(random(0,100),103,150); // I changed the outside color of the triangles to make it look retro.
+      // stroke(); // 
 
       // fill color
-      fill(14,208,200); // the fill color is now a seafoam green
+      fill(14,208,270); // the fill color 
 
       //arc
       arc(random(0,10,100,0,0,90));
 
       // the triangle
-      triangle(-50, 0, 52.5, 65, 0, -50); // changed from ellipse to triangle
+      triangle(-25, 0, 26.25, 32.5, 0, -25); // changed from ellipse to triangle
 
-      //pop
-      pop(random(8,10));
+      
+      pop();
 
       push();
 
@@ -55,9 +55,8 @@ function draw() {
       // the sqaure
       rect(-2,0,-4,2); // adding a sqaure inside the circle, the -2,0 codes the square in the middle of the triangle
 
-      //pop
-      pop(random(8,10));
-
+      
+      pop();
         }
 
   }

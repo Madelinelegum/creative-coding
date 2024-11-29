@@ -1,4 +1,4 @@
-  let eyeX, eyeY, eyeRadius, pupilRadius; // watched this video https://www.youtube.com/watch?v=p0F8nBC1LdE
+let eyeX, eyeY, eyeRadius, pupilRadius; // watched this video https://www.youtube.com/watch?v=p0F8nBC1LdE
 
   function setup() { // https://codeclubworld.org/projects/make-a-face/steps/3 refernce
   createCanvas(400,400);
