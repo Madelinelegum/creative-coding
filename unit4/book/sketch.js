@@ -1,5 +1,5 @@
 let word = "boom";
-let wx = 0;
+let wc = 0;
 
 
 function setup() {
@@ -21,7 +21,7 @@ function setup() {
 		for (let p = 0; p < random(5,20); p++){
 			let paragraph = '';
 			for (let s = 0; s < random(3,20); s++){
-				let internalPunct = [",",",",",",";"",""--"];
+				let internalPunct = [",",",",",",";"," --"];
 				let endPunct = [".",".","?","!"];
 				let sentence = word.charAt(0).toUpperCase() + word.slice(1);
 				let sentenceLength = random(9,25);

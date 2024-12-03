@@ -44,15 +44,15 @@
         margin-left:25mm;
         margin-right: 18mm;
             @top-left {
-            content:conter(page);
+            content:counter(page);
        }
       }
 
-      @PAGE:right {
+      @page:right {
         margin-left: 18mm;
-        maegin-right: 25mm;
+        margin-right: 25mm;
             @top-right {
-            context: conter(page);
+            content:counter(page);
         }
       }
 
@@ -70,7 +70,7 @@
 
       h2 {
         break-before: right;
-        counter-increment: countChaper;
+        counter-increment: countChapter;
       }
 
       h2::before {
@@ -107,7 +107,7 @@
 
 
 
-    
+
     <main>
 
 
