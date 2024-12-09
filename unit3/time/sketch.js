@@ -15,7 +15,8 @@ function setup() {
 
   // draw stars in the background , https://editor.p5js.org/jesse_harding/sketches/0szF7gcAx
   for (let i = 0; i < 100; i++) {
-    stars.push(createVector(random(width), random(height / 2))); // upper half has randomized stars
+    stars.push(createVector(random(width), random(height / 2), random
+    (1,4))); // upper half has randomized stars
   }
 }
 
@@ -90,14 +91,14 @@ function drawCloud(x, y, w, h) {
   
   //main cloud shape with three humps
   ellipse(x, y, w, h); // center hump
-  ellipse(x - w * 0, y, w * 0, h); //left hump
-  ellipse(x + w * 0, y, w * 0, h); //right hump
+  // ellipse(x - w * 0, y, w * 0, h); //left hump
+  // ellipse(x + w * 0, y, w * 0, h); //right hump
 
   //adding smaller ellipses to make cloud more fluffy
 
-  ellipse(x - w * 0.5, y + h * 0.1, w * 0.7, h * 0.7);
-  ellipse(x + w * 0.5, y + h * 0.1, w * 0.7, h * 0.7);
-  ellipse(x, y + h * 0.2, w * 0.6, h * 0.6);
+  ellipse(x - w * 0.5, y + h * 0.1, w * 0.7, h * 0.7); //left hump
+  ellipse(x + w * 0.5, y + h * 0.1, w * 0.7, h * 0.7); //right hump
+  // ellipse(x, y + h * 0.2, w * 0.6, h * 0.6);
 }
 
   //cloud shape using ellipse
