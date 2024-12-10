@@ -6,13 +6,14 @@ let blockD = 1;
 let blockSpeed = 5;
 
 function setup() {
-  createCanvas(1200, 1200);
+  createCanvas(600, 600);
 
   startnewGame();
 }
 
 function draw() {
   background(220);
+  updateBlock();
   drawBlocks();
 }
 
@@ -30,7 +31,9 @@ function updateBlock() {
     blockD = 1;
   }
 
-  if(cuurentBlock.x + block)
+  if(curentBlock.x + currentBlock.z > width) {
+    blockD = -1;
+  }
 
 
 }
